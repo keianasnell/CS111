@@ -1,0 +1,36 @@
+NAME: Keiana Snell
+EMAIL: keianarei@g.ucla.edu
+ID: 504804776
+SLIPDAYS: 0
+
+DESCRIPTIONS:
+
+lab0.c --
+Source code for project 0. Program copies standard input to standard output. Deals appropriately with segmentation faults and catches of said faults.
+
+backtrace.png --
+Screenshot of seg fault in gdb, associated stack backtrace
+
+breakpoint.png -- 
+Screenshot of breakpoint in gdb, subsequent inspection of stack variables
+
+Makefile --
+supports make: default check clean dist
+smoke-check test cases:
+testInputOutput: tests simple case of --input=input.txt --output=output.txt 
+testSegFault: tests if program appropriately deals with --segfault
+testCatch: tests if program catches --segfault with --catch 
+
+SOURCES: 
+
+input/output redirection in lab0.c (lines 63-83):
+fd_juggling.html (example code)
+
+understand file i/o --
+https://www.classes.cs.uchicago.edu/archive/2017/winter/51081-1/LabFAQ/lab2/fileio.html
+
+info on getopt -- 
+https://www.gnu.org/software/libc/manual/html_node/Getopt-Long-Options.html#Getopt-Long-Options
+
+info on segfault --
+https://www.quora.com/What-is-your-way-to-generate-segmentation-fault-in-a-C-C++-program

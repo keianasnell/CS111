@@ -1,0 +1,58 @@
+NAME: Keiana Snell
+EMAIL: keianarei@g.ucla.edu
+ID: 504804776
+SLIPDAYS: 0
+
+
+Tarbell contents:
+
+lab1b-client.c--
+File contains code for client program for communication across a TCP connection.
+CLI arguments include: [--port=port] [--encrypt=filename] [--log=filename]
+Client program sets terminal modes and connects to server via TCP socket.
+Client reads from standard input, writes to the socket, reads back from socket, and writes to standard output. If log file is specified, client will also write to the log file.
+If encryption file is specified, client will encrypt and decrypt using encryption key before sending through the socket. 
+
+lab1b-server.c--
+File contains code for server program for communication across a TCP connection.
+CLI arguments include: [--port=port] [--encrypt=filename]
+Server program connects to the client via TCP socket, then pipes and forks to create a shell process. 
+Server reads from socket, writes to shell (which executes the instructions) via pipe, reads from pipe, and writes back to the socket. 
+If encryption file is specified, server will decrypt and encrypt using encryption key before sending back through the socket (shell only receives decrypted text).
+Server also handles shutdown of shell and socket.
+
+my.key--
+File contains encryption key used as argument for --encrypt. Generated using the following command: `openssl rand 128 > my.key` (from discussion)
+
+Makefile--
+File contains make instructions for targets.
+Targets include: default (builds both client & server), client, server, clean, dist
+
+README--
+File contains information about other files in tarbell, notes about project, and sources of project help.
+
+
+
+Project Notes:
+Note: the log file produced with the [--log=filename] is broken up (not one SENT & RECEIVED line) because of the loop produced to read STDIN and STDOUT. It still produces the correct output (ex. `ls` outputs the correct directory files), it just looks janky.
+
+Note: TA said to make `my.key` 128 or 256 bytes. Thus, I only accounted for a 128-byte key in my code; there is undefined behavior for keys of size 128+ bytes.
+
+Note: 
+`Unable to open input file LOG_2` error in sanity check is unusual because I can successfully open the log files as seen previously in `log SENT commands ... PASS`. Not sure what the details about the file LOG_2 (if previously existing/unwritable), but my log option has been tested with and without the check and it works.
+
+Sources:
+Socket information-- 
+http://www.cs.rpi.edu/~moorthy/Courses/os98/Pgms/server.c
+http://www.cs.rpi.edu/~moorthy/Courses/os98/Pgms/client.c
+
+file open information, example--
+http://man7.org/linux/man-pages/man3/fopen.3.html
+https://stackoverflow.com/questions/9840629/create-a-file-if-one-doesnt-exist-c
+
+killing extraneous processes--
+http://are-you-ready.de/blog/2016/11/09/find-and-kill-process-on-specific-port-lsof/
+https://campuswire.com/c/G02EA2DB4/feed/108
+
+encryption--
+https://stackoverflow.com/questions/5860938/mcrypt-generic-init-meaning-of-the-iv-parameter

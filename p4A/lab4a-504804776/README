@@ -1,0 +1,32 @@
+NAME: Keiana Snell
+EMAIL: keianarei@g.ucla.edu
+ID: 504804776
+Beaglebone S/N: BBGW17080093
+MAC Address: 60:64:05:19:14:f4
+SLIPDAYS: 0
+
+
+Tarbell contents:
+
+my_beaglebone.jpg 
+File is a selfie of me holding my Beaglebone :-)
+
+connected.png 
+File is a screenshot showing that I renamed my BB and configured network access. I used a mobile hotspot as my WiFi network instead of eduroam due to connectivity issues; the inet address in `wlan0` reflects this change.
+
+copy.png
+File is a screenshot from a local session where I scp a “Hello, World!” program from my laptop/desktop to my BB.
+
+build_run.png
+File is a screenshot in which I build and run the previously copied “Hello, World!” program.
+
+git.png 
+File is a screenshot of the installation of git onto my BB. I then git clone one of my own github repositories onto my BB.
+
+
+Makefile--
+File contains make information to build the tarbell.
+Targets include: dist
+
+README--
+File contains identification information and descriptions of tarbell contents.

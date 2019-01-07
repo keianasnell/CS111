@@ -1,0 +1,18 @@
+NAME: Keiana Snell
+EMAIL: keianarei@g.ucla.edu
+ID: 504804776
+SLIPDAYS: 0
+
+Tarbell contents:
+
+lab4c_tcp.c: File contains program to run temperature sensor on Beaglebone and log information to server. Uses TCP sockets to accomplish server connection.
+
+
+lab4c_tls.c: File contains program to run temperature sensor on Beaglebone and log information to server. Uses TLS & sockets to accomplish server connection.
+
+
+Makefile: File contains targets for compiling both c programs.
+Targets include: default, dist, clean
+
+
+README: File contains identification information and descriptions about files in the tarbell contents. 

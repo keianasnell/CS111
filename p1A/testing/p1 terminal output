@@ -1,0 +1,98 @@
+
+[classsne@lnxsrv09 ~/Desktop/p1]$ ./P1A_check.sh 504804776
+... using test directory /u/eng/class/classsne/Desktop/p1/CS111_test.classsne
+... extracting /u/eng/class/classsne/Desktop/p1/lab1a-504804776.tar.gz
+lab1a.c
+Makefile
+README
+... checking for README file
+    README ... OK
+... checking for submitter ID in README
+    single submitter: 504804776
+... checking for submitter email in README
+    single address: keianarei@g.ucla.edu ... OK
+... checking for submitter name in README
+    submitter(s): Keiana Snell ... OK
+... checking slip-day use in README
+    0 days
+... checking for other expected files
+    Makefile ... OK
+... checking for other files of expected types
+    lab1a.c ... OK
+... checking for required Make targets
+    Makefile target clean ... OK
+    Makefile target dist ... OK
+... checking for required compillation options
+    Makefile includes Wall ... OK
+    Makefile includes Wextra ... OK
+... building default target(s)
+gcc -Wall -Wextra -g -o lab1a lab1a.c
+    RC=0 ... OK
+    error output ...  NONE
+... checking make dist
+tar -czf lab1a-504804776.tar.gz lab1a.c Makefile README
+    RC=0 ... OK
+    error output ...  NONE
+    lab1a-504804776.tar.gz ... OK
+ ... checking make clean
+rm -rf lab1a *.tar.gz
+    RC=0 ... OK
+    restored to freshly untar-ed state ... OK
+... redo default make
+gcc -Wall -Wextra -g -o lab1a lab1a.c
+    RC=0 ... OK
+    error output ...  NONE
+... checking for expected products
+    ./lab1a ... OK
+... ./lab1a detects/reports bogus arguments
+    RC=1 ... OK
+        ./lab1a: unrecognized option '--bogus'
+ERROR: Unrecognized argument; only ./lab1a [--shell=program] accepted
+... downloading pty_test.c from www.cs.ucla.edu/classes/cs111/Software
+... building pty_test
+-rwxr-xr-x 1 classsne class 23464 Oct  8 22:15 pty_test
+
+... confiriming disable of ICANON
+... confirming disable of ECHO
+... checking mode restoration on exit
+... confirming character at a time echo
+... confirming batch character echo and processing
+... confirming cr->crlf translation
+... confirming basic shell input/output
+... confirming input was processed by shell
+... FAIL echo $SHELL
+STDERR DUMP FOLLOWS
+EXPECTATION NOT FULFILLED
+STDOUT DUMP FOLLOWS
+echo $SHELL is running test script
+... confirming correct large-burst input processing
+... FAIL echo $SHELL
+STDERR DUMP FOLLOWS
+EXPECTATION NOT FULFILLED
+STDOUT DUMP FOLLOWS
+echo $SHELL is running test script
+
+... confirming cr->nl mapping on shell input
+... FAIL
+... confirming shell exit status reporting
+FAIL ... expected STATUS=9
+... confirming interrupt generation to shell
+FAIL ... shell did nnot report receiving SIGINT
+... confirming EOF generation to shell
+FAIL ... expected exit w/STATUS=0
+STDOUT dump follows
+echo $SHELL
+... checking for orphaned processes
+
+THIS SUBMISSION WILL USE NO SLIP-DAYS
+
+THE ONLY STUDENTS WHO WILL RECEIVE CREDIT FOR THIS SUBMISSION ARE:
+    504804776    keianarei@g.ucla.edu
+
+... cleaning up temporary files
+... removing test directory /u/eng/class/classsne/Desktop/p1/CS111_test.classsne
+
+SUBMISSION lab1a-504804776.tar.gz ... FAILS sanity check with 6 errors
+[classsne@lnxsrv09 ~/Desktop/p1]$ vi lab1a.c
+[classsne@lnxsrv09 ~/Desktop/p1]$ vi P1A_check.sh
+[classsne@lnxsrv09 ~/Desktop/p1]$ 

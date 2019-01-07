@@ -1,0 +1,13 @@
+NAME: Keiana Snell
+EMAIL: keianarei@g.ucla.edu
+ID: 504804776
+SLIPDAYS: 0
+
+Tarbell contents:
+
+lab3a.c: File contains program that takes in a file system image as argument and outputs a summary of the image (like debugfs).
+
+Makefile: File contains targets to run and compile lab3a program.
+targets include default, dist, clean.
+
+README: contains identification information and descriptions of each file in the tarbell.

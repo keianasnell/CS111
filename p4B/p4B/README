@@ -1,0 +1,15 @@
+NAME: Keiana Snell
+EMAIL: keianarei@g.ucla.edu
+ID: 504804776
+SLIPDAYS: 0
+
+Tarbell contents:
+
+lab4b.c: File containing C program for working with Beaglebone and its respective temperature and button sensors. 
+Program arguments include varying inputs for period, scale, and log file name.
+
+Makefile: File contains targets for compiling and compressing tarbell contents.
+Make targets include: default, dist, clean, check 
+
+
+README: File containing identification information and descriptions of tarbell content files.

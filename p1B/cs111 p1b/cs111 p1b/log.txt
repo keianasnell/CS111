@@ -1,0 +1,24 @@
+SENT 1 bytes: l 
+RECEIVED 1 bytes:  
+SENT 1 bytes: s 
+RECEIVED 1 bytes:  
+SENT 1 bytes:  
+RECEIVED 1 bytes:  
+SENT 1 bytes:  
+RECEIVED 79 bytes: Makefile
+lab1b-client
+lab1b-client.c
+lab1b-server
+lab1b-server.c
+log.txt
+ 
+SENT 79 bytes:  
+RECEIVED 8 bytes: my.key
+
+lab1b-client
+lab1b-client.c
+lab1b-server
+lab1b-server.c
+log.txt
+ 
+SENT 8 bytes:  
